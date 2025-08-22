@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NL → SQL for BigQuery</title>
+  <style>
+    :root { --muted:#667085; --bg:#f6f8fa; --border:#e5e7eb; }
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; max-width: 900px; margin: 24px auto; padding: 0 16px; }
+    h1 { margin: 0 0 8px; }
+    p.small { color: var(--muted); margin: 4px 0 16px; }
+    textarea { width: 100%; min-height: 120px; padding: 10px; font-size: 14px; }
+    button { padding: 10px 14px; cursor: pointer; }
+    .row { display:flex; gap:10px; align-items:center; margin:10px 0 16px; }
+    .status { color: var(--muted); font-size: 13px; }
+    pre { background: var(--bg); padding: 12px; overflow:auto; border:1px solid var(--border); }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid var(--border); padding: 6px 8px; font-size: 13px; }
+    .card { border:1px solid var(--border); padding:12px; border-radius:8px; background:white; }
+    .chips { display:flex; gap:8px; flex-wrap:wrap; margin: 8px 0 0; }
+    .chip { font-size:12px; background:var(--bg); border:1px solid var(--border); padding:6px 8px; border-radius:999px; cursor:pointer; }
+    .error { color:#b00020; white-space:pre-wrap; }
+  </style>
+</head>
+<body>
+  <h1>🧠 NL → SQL for BigQuery</h1>
+  <p class="small">输入自然语言，我会生成 SQL、查询 BigQuery，并返回数据与简要说明。</p>
+
+  <textarea id="q" placeholder="示例：列出 FLEXPLM_DB11 里最近更新的 10 条记录（显示 product_id, updated_at）"></textarea>
+  <div class="row">
+    <button id="ask">查询</button>
+    <span id="status" class="status"></span>
+  </div>
+
+  <div class="card">
+    <strong>示例问题（点击填充）：</strong>
+    <div class="chips" id="examples"></div>
+  </div>
+
+  <h3>说明</h3>
+  <p id="summary"></p>
+
+  <h3>生成的 SQL</h3>
+  <pre id="sql"></pre>
+
+  <h3>结果</h3>
+  <div id="result"></div>
+
+  <h3>错误</h3>
+  <div id="error" class="error"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
