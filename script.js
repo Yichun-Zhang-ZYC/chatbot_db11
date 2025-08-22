@@ -1,5 +1,5 @@
 // ❶ 把下面换成你的 Apps Script Web App URL（以 /exec 结尾）
-const ENDPOINT = 'https://script.google.com/macros/s/AKfycbzqdmFyJkS46NNLmKw9BGnw7BRHDPozvgyO9vWlpVlWMSXFNVGCGuatRT128xbqZyLW/exec';
+const ENDPOINT = 'https://script.google.com/macros/s/AKfycbwdHWLxSWkYFwp3NqdQacvihJ87RQ2jvf0Q0di2hix_PyvLDxp4-Jq3CXiMszqB_Mlf/exec';
 
 const $ = sel => document.querySelector(sel);
 
@@ -91,5 +91,6 @@ document.addEventListener('DOMContentLoaded', () => {
   renderExamples();
   $('#ask').addEventListener('click', runQuery);
 });
+
 
 
