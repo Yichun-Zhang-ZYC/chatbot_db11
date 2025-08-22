@@ -1,5 +1,5 @@
 // ❶ 把下面换成你的 Apps Script Web App URL（以 /exec 结尾）
-const ENDPOINT = 'https://script.google.com/a/macros/homedepot.com/s/AKfycbzmF5Nt8Tg5oF5K78chFKKdbo9KOET1a9rnKtsWxFxsrfnl-DE3nsO5LVozoFQpLFST/exec';
+const ENDPOINT = 'https://script.google.com/macros/s/AKfycbzqdmFyJkS46NNLmKw9BGnw7BRHDPozvgyO9vWlpVlWMSXFNVGCGuatRT128xbqZyLW/exec';
 
 const $ = sel => document.querySelector(sel);
 
@@ -91,4 +91,5 @@ document.addEventListener('DOMContentLoaded', () => {
   renderExamples();
   $('#ask').addEventListener('click', runQuery);
 });
+
 
