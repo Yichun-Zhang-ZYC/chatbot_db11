@@ -37,6 +37,7 @@ async function runQuery() {
   try {
     // 用 GET 避免预检；请确保 Web App 访问权限设置为“Anyone with the link”
     const url = ENDPOINT + '?q=' + encodeURIComponent(q);
+    console.log(url)
     const resp = await fetch(url, { method: 'GET' });
     if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
 
@@ -90,3 +91,4 @@ document.addEventListener('DOMContentLoaded', () => {
   renderExamples();
   $('#ask').addEventListener('click', runQuery);
 });
+
