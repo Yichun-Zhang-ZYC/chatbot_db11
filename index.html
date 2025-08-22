@@ -24,11 +24,11 @@
 </head>
 <body>
   <h1>🧠 NL → SQL for BigQuery</h1>
-  <p class="small">输入自然语言，我会生成 SQL、查询 BigQuery，并返回数据与简要说明。</p>
+  <p class="small">Ask Questions here... I will query the table and provide explanations here...</p>
 
-  <textarea id="q" placeholder="示例：列出 FLEXPLM_DB11 里最近更新的 10 条记录（显示 product_id, updated_at）"></textarea>
+  <textarea id="q" placeholder="Examples：列出 FLEXPLM_DB11 里最近更新的 10 条"></textarea>
   <div class="row">
-    <button id="ask">查询</button>
+    <button id="ask">submit</button>
     <span id="status" class="status"></span>
   </div>
 
@@ -37,18 +37,19 @@
     <div class="chips" id="examples"></div>
   </div>
 
-  <h3>说明</h3>
+  <h3>SUMMARY</h3>
   <p id="summary"></p>
 
-  <h3>生成的 SQL</h3>
+  <h3>SQL GENERATED</h3>
   <pre id="sql"></pre>
 
-  <h3>结果</h3>
+  <h3>RESULTS</h3>
   <div id="result"></div>
 
-  <h3>错误</h3>
+  <h3>ERRORS</h3>
   <div id="error" class="error"></div>
 
   <script src="script.js"></script>
 </body>
 </html>
+
